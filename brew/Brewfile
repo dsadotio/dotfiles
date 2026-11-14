@@ -1,7 +1,19 @@
-tap "bufbuild/buf"
-tap "cloudflare/cloudflare"
-tap "hashicorp/tap"
-tap "surrealdb/tap"
+tap "cloudflare/cloudflare", trusted: { 
+  formula: "cloudflared"
+}
+
+tap "bufbuild/buf", trusted: { 
+  formula: "buf"
+}
+
+tap "felipesere/tap", trusted: { 
+  formula: "everdiff"
+}
+
+tap "hashicorp/tap", trusted: { 
+  formula: "terraform"
+}
+
 
 brew "atuin"
 brew "bat"
@@ -11,9 +23,7 @@ brew "cfssl"
 brew "choose-rust"
 brew "cloudflared"
 brew "curl"
-brew "derailed/k9s/k9s"
 brew "direnv"
-brew "docker"
 brew "composer"
 brew "exiftool"
 brew "eza"
@@ -24,6 +34,7 @@ brew "git-delta"
 brew "gnupg"
 brew "hashicorp/tap/terraform"
 brew "helm"
+brew "herdr"
 brew "httpie"
 brew "kubelogin"
 brew "kubernetes-cli"
@@ -40,7 +51,7 @@ brew "protobuf"
 brew "ripgrep"
 brew "starship"
 brew "stern"
-brew "surrealdb/tap/surreal"
+brew "talosctl"
 brew "tmux"
 brew "watch"
 brew "wget"

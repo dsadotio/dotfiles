@@ -58,3 +58,6 @@ alias pa="php artisan"
 alias mfs="php artisan migrate:fresh --seed"
 
 alias drastctl="kubectl --kubeconfig <(op item get \"Kubernetes:Kubeconfig:Atlantis\" --vault \"Infra:Automated\" --account \"FDZUGOIOYBDGDIP6KEQJWLFACI\" --format json | jq -r '.fields[] | select(.label == \"password\") | .value')"
+
+alias dalos='talosctl --talosconfig <(op item get "Kubernetes:Talosconfig" --vault gfn54euhrvr7zhumze3aw557wu --account FDZUGOIOYBDGDIP6KEQJWLFACI --fields password --reveal --format json | jq -r .value) -e 10.0.10.10 -e 10.0.10.11 -e 10.0.10.12'
+
