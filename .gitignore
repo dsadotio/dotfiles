@@ -5,3 +5,4 @@ tmp/*
 .idea/
 .zsh_profile
 secrets/*
+ghostty/*.bak
